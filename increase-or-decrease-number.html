@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA-SCRIPT</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+            flex-shrink: 1;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+        .button{
+            cursor: pointer;
+            padding: 10px;
+            font-family: "poppins, sanserif";
+            font-weight: 600;
+            color: white;
+            font-size: 17px;
+            border-radius: 10px;
+            border: 1px solid rgba(225, 225, 225, 0.15);
+        }
+        .screen{
+            text-align: center;
+            line-height: 45vh;
+            height: 45vh;
+            width: 80vw;
+            background-color:rgba(204, 204, 204, 0.925);
+            border-radius: 20px;
+            margin-bottom: 2cm;
+            font-weight: 900;
+            font-size: 55px;
+            color: black;
+        }
+        .screen:hover{
+            background-color:rgba(167, 167, 167, 0.925);
+            line-height: 47vh;
+            height: 47vh;
+            width: 83vw;
+            transition: all 0.3s ease-in-out;
+        }
+        .increase{
+            background-color: rgb(3, 167, 3);
+        }
+        .decrease{
+            background-color: rgb(204, 11, 11);
+        }
+        .reset{
+            background-color: rgb(39, 39, 255);
+        }
+        .increase:hover{
+            background-color: rgb(1, 230, 1);
+            padding: 12px;
+            transition: all 0.25s ease-in-out;
+        }
+        .decrease:hover{
+            background-color: rgb(255, 0, 0);
+            padding: 12px;
+            transition: all 0.25s ease-in-out;
+        }
+        .reset:hover{
+            background-color: rgb(76, 76, 255);
+            padding: 12px;
+            transition: all 0.25s ease-in-out;
+        }
+        @media (max-width:800px){
+             .screen{
+            text-align: center;
+            line-height: 35vh;
+            height: 35vh;
+            width: 70vw;
+            background-color:rgba(204, 204, 204, 0.925);
+            border-radius: 20px;
+            margin-bottom: 2cm;
+            font-weight: 900;
+            font-size: 55px;
+            color: black;
+        }
+    }
+        @media (max-width:2000px){
+             .screen{
+            text-align: center;
+            line-height: 40vh;
+            height: 40vh;
+            width: 80vw;
+            background-color:rgba(204, 204, 204, 0.925);
+            border-radius: 20px;
+            margin-bottom: 2cm;
+            font-weight: 900;
+            font-size: 55px;
+            color: black;
+        }
+        .button{
+            padding: 25px;
+            font-size: 30px;
+        }
+        .button:hover{
+            padding: 29px;
+            font-size: 31px;
+        }
+    }
+        @media (max-width:1100px){
+            .screen{
+                text-align: center;
+                line-height: 45vh;
+                height: 45vh;
+            width: 80vw;
+            background-color:rgba(204, 204, 204, 0.925);
+            border-radius: 20px;
+            margin-bottom: 2cm;
+            font-weight: 900;
+            font-size: 55px;
+            color: black;
+        }
+    }
+    @media (max-width:600px){
+         .screen{
+        text-align: center;
+        line-height: 45vh;
+        height: 45vh;
+        width: 65vw;
+        background-color:rgba(204, 204, 204, 0.925);
+        border-radius: 20px;
+        margin-bottom: 2cm;
+        font-weight: 900;
+        font-size: 55px;
+        color: black;
+    }
+    .button{
+        padding: 10px;
+        gap: 5px;
+        font-size: 25px;
+    }
+    .button:hover{
+        padding: 18px;
+        font-size: 27px;
+    }
+}
+    @media (max-width:440px){
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+         .screen{
+        text-align: center;
+        line-height: 35vh;
+        height: 35vh;
+        width: 75vw;
+        background-color:rgba(204, 204, 204, 0.925);
+        border-radius: 20px;
+        margin-bottom: 2cm;
+        font-weight: 900;
+        font-size: 40px;
+        color: black;
+    }
+    .button{
+        padding: 9px;
+        gap: 2px;
+        font-size: 20px;
+    }
+    .button:hover{
+        padding: 11px;
+        font-size: 23px;
+        gap: 3px;
+    }
+}
+    @media (max-width:360px){
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+         .screen{
+        text-align: center;
+        line-height: 35vh;
+        height: 35vh;
+        width: 75vw;
+        background-color:rgba(204, 204, 204, 0.925);
+        border-radius: 20px;
+        margin-bottom: 2cm;
+        font-weight: 900;
+        font-size: 40px;
+        color: black;
+    }
+    .button{
+        padding: 10px;
+        font-size: 16px;
+    }
+    .buttons{
+        gap: 15px;
+    }
+}
+    @media (max-width:300px){
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+         .screen{
+        text-align: center;
+        line-height: 35vh;
+        height: 35vh;
+        width: 75vw;
+        background-color:rgba(204, 204, 204, 0.925);
+        border-radius: 20px;
+        margin-bottom: 2cm;
+        font-weight: 900;
+        font-size: 40px;
+        color: black;
+    }
+    .button{
+        padding: 8px;
+        font-size: 15px;
+    }
+    .buttons{
+        gap: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="screen" class="screen"></div>
+    <div class="buttons">
+        <button id="increase" class="increase button">Increase</button>
+        <button id="reset" class="reset button">Reset</button>
+        <button id="decrease" class="decrease button">Decrease</button>
+    </div>
+
+    <script>
+        let num = 0;
+        let increases = document.getElementById("increase").onclick = function(){
+             num ++;
+            document.getElementById("screen").textContent = num;
+        }
+        let decreases = document.getElementById("decrease").onclick = function(){
+             num --;
+            document.getElementById("screen").textContent = num;
+        }
+        let resets = document.getElementById("reset").onclick = function(){
+            num = 0;
+            document.getElementById("screen").textContent = num;
+        }
+    </script>
+</body>
+</html>
